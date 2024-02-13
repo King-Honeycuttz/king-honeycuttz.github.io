@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>King Honeycuttz</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Digital Clock with Date</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="initClock()">
+
     <nav>
         <div class="container">
             <ul class="sidebar">
@@ -17,7 +18,7 @@
                 <li><a href="">Contact</a></li>
             </ul>
             <ul>
-                <li><a href=""><img src="img/logo-white.png" alt="">&lt;/Honeycuttz&gt;</a></li>
+                <li><a href=""><img src="logo-white.png" alt="">&lt;/Honeycuttz&gt;</a></li>
                 <li class="hideOnMobile"><a href="#">Home</a></li>
                 <li class="hideOnMobile"><a href="#">About</a></li>
                 <li class="hideOnMobile"><a href="#">Projects</a></li>
@@ -27,22 +28,32 @@
         </div>
     </nav>
 
-    <div class="sec1">
-        <div class="container">
-            <div class="content">>
-                <span class="blur"></span>
-                <h4>Imagine | Develope | Create</h4>
-                <h1>Hi, I'm <span>Honeycuttz</span>, a Web Developer</h1>
-                <p>Follow along as we learn together and become the greatest web developer's
-                that we can be all being self taught.
-                </p>
-            </div>
-            <div class="image"><img src="img/header.png"></div>
+    <div class="page">
+    <div class="datetime">
+        <div class="date">
+            <span id="dayname">Day</span>,
+            <span id="month">Month</span>
+            <span id="daynum">00</span>,
+            <span id="year">Year</span>
+        </div>
+        <div class="time">
+            <span id="hour">00</span>:
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>
+            <span id="period">AM</span>
+
         </div>
     </div>
+    <div class="search">
+        <form action="https://www.google.com/search" method="get" class="search-bar">
+            <input type="text" placeholder="Quid Quaeris?" name="q">
+            <button type="submit"><img src="search.png"></button>
+        </form>
+    </div>
+    </div>
 
-    <div class="sec2"></div>
-    <div class="sec3"></div>
-    <script src="script/script.js"></script>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
